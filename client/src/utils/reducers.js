@@ -12,11 +12,11 @@ import {
 } from './actions';
 
 const initialState = {
+  products: [],
+  cart: [],
+  cartOpen: false,
   categories: [],
   currentCategory: '',
-  products: [],
-  cartOpen: false,
-  cart: [],
 };
 
 // TODO: To get a better understand of how a reducer works - add comments to the various actions in the reducer
