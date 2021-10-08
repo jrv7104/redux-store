@@ -11,11 +11,20 @@ import {
   TOGGLE_CART,
 } from './actions';
 
+const initialState = {
+  categories: [],
+  currentCategory: '',
+  products: [],
+  cartOpen: false,
+  cart: [],
+};
+
 // TODO: To get a better understand of how a reducer works - add comments to the various actions in the reducer
-export const reducer = (state, action) => {
+// The reducer uses the initialState function to start off blank, but returns updated data based on the action.
+export const reducer = (state = initialState, action) => {
   switch (action.type) {
     // TODO: Add a comment describing the functionality of the UPDATE_PRODUCTS case
-    // Your comment here
+    // When the action.products property is used, the state is updated with updated content in the array.
     case UPDATE_PRODUCTS:
       return {
         ...state,
@@ -35,7 +44,9 @@ export const reducer = (state, action) => {
         cart: [...state.cart, ...action.products],
       };
     // TODO: Add a comment describing the functionality of the UPDATE_CART_QUANTITY case
-    // Your comment here
+    // When the action.purchaseQuantity is invoked it will allow the user to update the quantity of a specified product,
+    // then the new information will be displayed with the updated state feature. It uses product id to
+    // determine which product gets updated.
     case UPDATE_CART_QUANTITY:
       return {
         ...state,
@@ -49,7 +60,8 @@ export const reducer = (state, action) => {
       };
 
     // TODO: Add a comment describing the functionality of the REMOVE_FROM_CART case
-    // Your comment here
+    // When a product is selected from the cart, the updated state function will remove the selected item
+    // and be updated by no longer having the selected product in the cart. Once again the product id determines which item gets removed.
     case REMOVE_FROM_CART:
       let newState = state.cart.filter((product) => {
         return product._id !== action._id;
@@ -87,7 +99,8 @@ export const reducer = (state, action) => {
       };
 
     // TODO: Add a comment describing what the default case is for
-    // Your comment here
+    // In the event of a crash, return state would return the user to what they saw on the client side,
+    // which would prevent a loss of saved data and prevent a loss of additional time used to shop.
     default:
       return state;
   }
