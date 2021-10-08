@@ -12,3 +12,10 @@ https://redux-store12.herokuapp.com/
 
 ## Screenshots
 
+
+<img width="1313" alt="Screen Shot 2021-10-08 at 9 42 31 AM" src="https://user-images.githubusercontent.com/65679950/136577291-5b00ba65-dab8-4dbc-b4aa-c24c6c84601c.png">
+
+![Screen Shot 2021-10-08 at 9 42 59 AM](https://user-images.githubusercontent.com/65679950/136577330-7d2c01dc-2baa-4d14-a281-b21563c9504c.jpeg)
+
+<img width="1291" alt="Screen Shot 2021-10-08 at 9 43 07 AM" src="https://user-images.githubusercontent.com/65679950/136577341-b361a3fc-5254-42bd-9ce6-aac907450520.png">
+
